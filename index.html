@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ar">
+<head>
+    <style>
+body {
+    text-align: center;
+    font-family: Arial;
+    background-image: url("bg.jpg.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+html[lang="ar"] {
+    direction: rtl;
+    text-align: right;
+}
+
+html[lang="en"] {
+    direction: ltr;
+    text-align: left;
+}
+body {
+    color: #f7f8f9; 
+}
+</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LAMSA — الصفحة الرئيسية</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <div class="overlay"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      
+      <div class="logo-mark">LAMSA</div>
+      <div class="brand-text">
+        <div class="brand-ar">لمسة</div>
+        <div class="brand-en">Lamsa</div>
+         
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" data-i18n="nav_home">الرئيسية</a>
+      <a href="products.html" data-i18n="nav_products">المنتجات</a>
+      <a href="about.html" data-i18n="nav_about">من نحن</a>
+      <a href="contact.html" data-i18n="nav_contact">تواصل</a>
+      <a href="checkout.html" data-i18n="nav_checkout">الدفع</a>
+      <button id="langBtn" class="lang-btn">English</button>
+      <a href="cart.html" class="cart-link" id="cartLink">0</a>
+    </nav>
+  </header>
+
+  <main class="hero center">
+    <h1 data-i18n="home_title">متجر لمسة — بلوفرات فاخرة</h1>
+    <p class="muted" data-i18n="home_sub">سعر كل بلوفر: <strong id="priceText">د.ك 10.00</strong></p>
+    <div class="hero-actions">
+      <a href="products.html" class="btn btn-primary" data-i18n="shop_now">تسوق الآن</a>
+      <button class="btn btn-ghost" onclick="openCart()" data-i18n="view_cart">عرض السلة</button>
+    </div>
+  </main>
+  <div>
+<body>
+
+    <div class="navbar">
+        <a href="#home">الرئيسية</a>
+        <a href="#products">المنتجات</a>
+        <a href="#about">عنّا</a>
+        <a href="#contact">تواصل</a>
+    </div>
+
+    <h1>لمسة – متجر بلوفرات</h1>
+    <p>مرحبا بكم في متجر لمسة للملابس</p>
+
+</body>
+ <h1 style="color: rgb(0, 208, 255) ; text-align: center;سكنات رهيبه بسعر اقل من سعر العبه </h1>
+
+
+  </div>
+
+  <footer class="site-footer">
+    <div data-i18n="footer_text">© <span id="year"></span> لمسة — كل الحقوق محفوظة | Kuwait</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+<button id="langBtn">English</button>
+<script>
+document.getElementById("langBtn").onclick = function() {
+    if (document.documentElement.lang === "ar") {
+        document.documentElement.lang = "en";
+        this.textContent = "العربية";
+    } else {
+        document.documentElement.lang = "ar";
+        this.textContent = "English";
+    }
+};
+</script>
+</html>

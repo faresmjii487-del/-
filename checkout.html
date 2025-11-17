@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LAMSA — الدفع</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+        <style>
+body {
+    text-align: center;
+    font-family: Arial;
+    background-image: url("bg.jpg.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+html[lang="ar"] {
+    direction: rtl;
+    text-align: right;
+}
+
+html[lang="en"] {
+    direction: ltr;
+    text-align: left;
+}
+body {
+    color: #e5e8eb; 
+}
+</style>
+<body>
+     
+  <div class="overlay"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo-mark">LAMSA</div>
+      <div class="brand-text">
+        <div class="brand-ar">لمسة</div>
+        <div class="brand-en">Lamsa</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" data-i18n="nav_home">الرئيسية</a>
+      <a href="products.html" data-i18n="nav_products">المنتجات</a>
+      <a href="about.html" data-i18n="nav_about">من نحن</a>
+      <a href="contact.html" data-i18n="nav_contact">تواصل</a>
+      <a href="checkout.html" data-i18n="nav_checkout">الدفع</a>
+      <button id="langBtn" class="lang-btn">English</button>
+      <a href="cart.html" class="cart-link" id="cartLink">0</a>
+    </nav>
+  </header>
+
+  <main class="container checkout">
+    <h2 data-i18n="checkout_title">الدفع عبر KNET</h2>
+    <p class="muted" data-i18n="checkout_sub">المبلغ الإجمالي سيظهر هنا. حدد بياناتك ثم اضغط زر KNET للدفع.</p>
+
+    <div class="checkout-box card">
+      <div id="checkoutSummary" class="muted"></div>
+
+      <div class="form-row">
+        <input id="custName" placeholder="الاسم الكامل" />
+        <input id="custPhone" placeholder="رقم الجوال" />
+      </div>
+
+      <div style="margin-top:12px;display:flex;gap:10px">
+        <button class="btn btn-primary" onclick="startKnet()">ادفع الآن عبر KNET</button>
+        <button class="btn btn-ghost" onclick="goBack()"><span data-i18n="back">العودة</span></button>
+      </div>
+
+      <p class="tiny muted" style="margin-top:8px" data-i18n="knet_note">ملاحظة: هذا زر تجريبي — اربطه ببوابة KNET الحقيقية لاحقًا.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div data-i18n="footer_text">© <span id="year5"></span> لمسة — كل الحقوق محفوظة | Kuwait</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ar">
+<head>
+        <style>
+body {
+    text-align: center;
+    font-family: Arial;
+    background-image: url("bg.jpg.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+html[lang="ar"] {
+    direction: rtl;
+    text-align: right;
+}
+
+html[lang="en"] {
+    direction: ltr;
+    text-align: left;
+}
+body {
+    color: #e7ebef; 
+}
+</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LAMSA — المنتجات</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo-mark">LAMSA</div>
+      <div class="brand-text">
+        <div class="brand-ar">لمسة</div>
+        <div class="brand-en">Lamsa</div>
+       
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html" data-i18n="nav_home">الرئيسية</a>
+      <a href="products.html" data-i18n="nav_products">المنتجات</a>
+      <a href="about.html" data-i18n="nav_about">من نحن</a>
+      <a href="contact.html" data-i18n="nav_contact">تواصل</a>
+      <a href="checkout.html" data-i18n="nav_checkout">الدفع</a>
+      <button id="langBtn" class="lang-btn">English</button>
+      <a href="cart.html" class="cart-link" id="cartLink">0</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 data-i18n="products_title">منتجاتنا</h2>
+    <p class="muted" data-i18n="products_sub">الأسعار ثابتة — د.ك 10.00 لكل بلوفر</p>
+
+    <div id="productsGrid" class="grid"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div data-i18n="footer_text">© <span id="year2"></span> لمسة — كل الحقوق محفوظة | Kuwait</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
