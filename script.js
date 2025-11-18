@@ -6,6 +6,13 @@ document.getElementById("langBtn").onclick = () => {
 };
 
 function changeLanguage() {
+    function switchLanguage() {
+    document.body.innerHTML = document.body.innerHTML
+        .replace(/الرئيسية/g, "Home")
+        .replace(/المنتجات/g, "Products")
+        .replace(/تواصل معنا/g, "Contact")
+        .replace(/عن المتجر/g, "About");
+}
     if (lang === "en") {
         document.documentElement.dir = "ltr";
 
