@@ -7,6 +7,9 @@ document.getElementById("langBtn").onclick = () => {
 
 function changeLanguage() {
     function switchLanguage() {
+        function switchLanguage() {
+  location.href = "english.html";
+}
     document.body.innerHTML = document.body.innerHTML
         .replace(/الرئيسية/g, "Home")
         .replace(/المنتجات/g, "Products")
@@ -40,6 +43,7 @@ function changeLanguage() {
         // Contact Page
         setText("contactTitle", "Contact Us");
         setText("contactText", "You can reach us through Instagram or WhatsApp.");
+    
     }
 
     else {

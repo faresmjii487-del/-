@@ -141,3 +141,15 @@ section, div {
     background-size: cover;
     background-repeat: no-repeat;
 }
+.navbar {
+    display: flex;
+    gap: 20px;
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
